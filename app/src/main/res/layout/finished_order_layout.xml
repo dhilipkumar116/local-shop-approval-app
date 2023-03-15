@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/adminorder_r1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@color/adminColor"
+            android:padding="5dp">
+
+            <CheckBox
+                android:id="@+id/paid_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="2dp"
+                android:text=""
+                />
+
+            <TextView
+                android:id="@+id/O_delete_ordertxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="delete"
+                android:background="@color/red"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/O_phonenum"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/white"
+                android:padding="4dp"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/O_bulk_ordertxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bulk"
+                android:background="@color/red"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/O_delete_ordertxt"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/white"
+                android:padding="2dp"
+                android:visibility="gone"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/O_shopname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="shop name"
+                android:textColor="@android:color/black"
+                android:textSize="15dp"
+                android:layout_marginLeft="3dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/O_phonenum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="viewEnd"
+                android:layout_marginEnd="35dp"
+                android:text="shop ph no"
+                android:textColor="@android:color/black"
+                android:layout_marginRight="3dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/O_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/O_shopname"
+                android:textColor="@android:color/black"
+                android:text="totalprice"
+                android:textSize="15sp"/>
+
+
+            <TextView
+                android:id="@+id/O_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_below="@+id/O_price"
+                android:textColor="@android:color/black"
+                android:text="order id"
+                android:textSize="15sp"
+                android:layout_marginEnd="20dp"/>
+
+            <TextView
+                android:id="@+id/O_bankname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_below="@id/O_id"
+                android:text="bank name"
+                android:textColor="@android:color/black"
+                android:textSize="14dp"
+                android:maxLines="2"/>
+
+            <TextView
+                android:id="@+id/O_banknum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_below="@id/O_bankname"
+                android:text="bank number"
+                android:textColor="@android:color/black"
+                android:textSize="14dp"
+                android:maxLines="2"/>
+
+            <TextView
+                android:id="@+id/O_oderstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/O_bankname"
+                android:text="order status"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="15sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="10dp"/>
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/O_oderstatus"
+            android:layout_marginTop="2dp"
+            android:background="@android:color/black"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+
+            <LinearLayout
+                android:id="@+id/riderl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/view"
+                android:layout_marginTop="2dp">
+                <TextView
+                    android:id="@+id/O_ridername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="rider name"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="3dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/O_riderphonenum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:textAlignment="viewEnd"
+                    android:text="rider ph no"
+                    android:textColor="@android:color/black"
+                    android:layout_marginRight="3dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/riderl2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/riderl1"
+                android:layout_marginTop="2dp">
+                <TextView
+                    android:id="@+id/O_riderVnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:layout_below="@+id/O_price"
+                    android:textColor="@android:color/black"
+                    android:text="vehicle num"
+                    android:textSize="15sp"
+                    android:layout_marginEnd="20dp"/>
+
+                <TextView
+                    android:id="@+id/O_riderTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/O_id"
+                    android:text="pick up time"
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp"
+                    android:maxLines="1"
+                    android:textAlignment="viewEnd"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/O_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_below="@id/riderl2"
+                android:text="address"
+                android:textColor="@android:color/black"
+                android:textSize="14dp"
+                android:maxLines="2"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
